@@ -1,42 +1,5 @@
-/*ОБНУЛЕНИЕ СТИЛЕЙ*/
-
-*{margin: 0; padding: 0; border: 0;}
-*, *::before, *::after{-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
-:focus, :active{outline: none;}
-a:focus, a:active{outline: none;}
-nav, footer, header, aside{display:block}
-html, body{height:100%; width:100%; font-size:100%; line-height:1; font-size:14px; -ms-text-size-adjust:100%; -webkit-text-size-adjust:100%;}
-input, button, taxtarea{font-family:inherit;}
-input::-ms-clear{display: none;}
-button{cursor: pointer;}
-button::-moz-focus-inner{padding: 0; border: 0;}
-a, a:visited{text-decoration: none;}
-a:hover{text-decoration: none;}
-ul li{list-style: none;}
-img{vertical-align: top;}
-h1, h2, h3, h4, h5, h6{font-size: inherit; font-weight: inherit;}
-/*----------------------------------*/
-
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
-
-@font-face {
-    font-family: 'Coolvetica';
-    src: local('Coolvetica Regular'), local('Coolvetica-Regular'),
-        url('../fonts/CoolveticaRg-Regular.woff2') format('woff2'),
-        url('../fonts/CoolveticaRg-Regular.woff') format('woff'),
-        url('../fonts/CoolveticaRg-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Coolvetica';
-    src: local('Coolvetica Bold'), local('Coolvetica-Bold'),
-        url('../fonts/CoolveticaRg-Bold.woff2') format('woff2'),
-        url('../fonts/CoolveticaRg-Bold.woff') format('woff'),
-        url('../fonts/CoolveticaRg-Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
-}
+@import 'null';
+@import 'fonts';
 
 $pink: #DA3A8D;
 $animSpeed: .2s;
@@ -59,7 +22,6 @@ a, button, label, .spoiler__header {
 .title {
     font-family: Coolvetica;
     font-size: 28px;
-    font-weight: 400;
     color: $pink;
 
     &_big {

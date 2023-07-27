@@ -75,14 +75,8 @@ h1, h2, h3, h4, h5, h6 {
 /*----------------------------------*/
 @font-face {
   font-family: "Coolvetica";
-  src: local("Coolvetica Regular"), local("Coolvetica-Regular"), url("../fonts/CoolveticaRg-Regular.woff2") format("woff2"), url("../fonts/CoolveticaRg-Regular.woff") format("woff"), url("../fonts/CoolveticaRg-Regular.ttf") format("truetype");
+  src: local("Coolvetica Regular"), local("Coolvetica-Regular"), url("../font/CoolveticaRg-Regular.woff2") format("woff2"), url("../font/CoolveticaRg-Regular.woff") format("woff"), url("../font/CoolveticaRg-Regular.ttf") format("truetype");
   font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Coolvetica";
-  src: local("Coolvetica Bold"), local("Coolvetica-Bold"), url("../fonts/CoolveticaRg-Bold.woff2") format("woff2"), url("../fonts/CoolveticaRg-Bold.woff") format("woff"), url("../fonts/CoolveticaRg-Bold.ttf") format("truetype");
-  font-weight: 700;
   font-style: normal;
 }
 [class*=__container] {
@@ -104,7 +98,6 @@ a, button, label, .spoiler__header {
 .title {
   font-family: Coolvetica;
   font-size: 28px;
-  font-weight: 400;
   color: #DA3A8D;
 }
 .title_big {
