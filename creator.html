@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrance</title>
+    <link rel="stylesheet" href="css/editing.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container">
+                <a href="#" class="header-logo">
+                    <img src="./img/editing/logo.svg" alt="logotype">
+                </a>
+
+                <div class="toggler-mode">
+                    <input type="radio" id="existants" name="mode" checked>
+                    <input type="radio" id="vierges" name="mode">
+
+                    <label class="toggler-mode__point" for="existants" id="existants-l">Modèles existants</label>
+                    <label class="toggler-mode__point" for="vierges" id="vierges-l">Modèles vierges</label>
+                </div>
+            </div>
+        </header>
+        <main class="main main_dark-bg">
+            <aside class="main__aside aside">
+                <div class="aside__body">
+                    <div class="aside__container">
+                        <div class="aside__header hor-centered">
+                            <h2 class="title">Éléments <br> de personnalisation</h2>
+                        </div>
+
+                        <div class="spoiler">
+                            <div class="spoiler__header">
+                                <span>Ajouter du texte</span>
+                                <div class="spoiler__icon">
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="spoiler__body"></div>
+                        </div>
+
+                        <div class="aside__buttons">
+                            <button class="button button_grey" onclick="openPopup('.popup-brouillons')">Enregist <br>rercomme brouillon</button>
+                            <button class="button button_filled" onclick="openPopup('.popup-valider')">Valider cette maquette</button>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <div class="main__body body">
+                <div class="body__wrapper">
+                    <div class="content-body">
+                        <div class="content-body__container">
+                            <div class="image-edited">
+                                <img src="./img/editing/e-img.png" alt="">
+                            </div>
+                            <div class="radio-box radio-box_light editor-checkbox">
+                                <div class="radio-box__check">
+                                    <input type="checkbox" class="radio-box__input" id="voir">
+                                    <label for="voir" class="radio-box__check-l" id="voir-l"></label>
+                                </div>
+                                <label for="voir">Voir sans image de présentation</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <aside class="main__aside aside">
+                <div class="aside__body">
+                    <div class="aside__container">
+                        <div class="aside__mod aside__mod_disabled">
+                            <h2 class="title">Modifier l’élément</h2>
+                            <img src="./img/editing/icons/empty-icon.svg" alt="" class="empty-decor">
+                            <p class="empty-text">Aucun élément sélectionné</p>    
+
+                            <div class="editor">
+                                (Edit tools)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </main>
+
+
+
+        <div class="popup popup-valider"> <!-- adding "popup_opened" class will open the popup -->
+            <div class="popup__card">
+                <div class="popup__header">
+                    <h2 class="popup__title title">Êtes-vous sûr ?</h2>
+                </div>
+                <p class="popup__subtitle">La validation d’une maquette <br> est définitive</p>
+
+                <div class="popup__buttons">
+                    <button class="popup__button button button_filled" onclick="openPopup('.popup-merci')">
+                        <span>Valider</span>
+                        <img src="./img/editing/icons/at-icon.svg" alt="">
+                    </button>
+                    <button class="popup__button button button_grey" onclick="closePopup()">
+                        <span>Annuler</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup popup-merci"> <!-- adding "popup_opened" class will open the popup -->
+            <div class="popup__card">
+                <div class="popup__header">
+                    <h2 class="popup__title title">Maquette validée</h2>
+                </div>
+                <p class="popup__subtitle">Merci !</p>
+
+                <div class="popup__buttons">
+                    <button class="popup__button button button_filled" onclick="closePopup()">
+                        <span>Ajouter une maquette</span>
+                    </button>
+                    <a href="#">Retour à mon espace client</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup popup-brouillons"> <!-- adding "popup_opened" class will open the popup -->
+            <div class="popup__card">
+                <div class="popup__header">
+                    <h2 class="popup__title title">Magnifique !</h2>
+                </div>
+                <p class="popup__subtitle">Votre maquette est maintenant <br> enregistrée en brouillons !</p>
+
+                <div class="popup__buttons">
+                    <button class="popup__button button button_filled" onclick="closePopup()">
+                        <span>Créer nouveau</span>
+                    </button>
+                    <a href="#">Retour à mon espace client</a>
+                </div>
+
+                <div class="popup-bottom">
+                    <div class="popup-bottom__icon">
+                        <img src="./img/editing/icons/warn-icon.svg" alt="">
+                    </div>
+                    <p class="popup-bottom__text">
+                        Une maquette enregistrée en brouillons et non-validée <br> ne sera pas prise en compte par nos préparateurs.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('click', e => {
+            if (e.target.closest('.spoiler__header')) {
+                e.target.closest('.spoiler').classList.toggle('active');
+                document.querySelector('.aside__mod').classList.toggle('aside__mod_disabled');
+            }
+        })
+
+        function openPopup(el) {
+            document.querySelectorAll('.popup').forEach(element => {
+                element.classList.remove('popup_opened')
+            })
+            document.querySelector(el).classList.add('popup_opened');
+        }
+        function closePopup() {
+            document.querySelectorAll('.popup').forEach(element => {
+                element.classList.remove('popup_opened')
+            })
+        }
+    </script>
+</body>
+</html>

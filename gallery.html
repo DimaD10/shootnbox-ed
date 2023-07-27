@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrance</title>
+    <link rel="stylesheet" href="css/editing.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container">
+                <a href="#" class="header-logo">
+                    <img src="./img/editing/logo.svg" alt="logotype">
+                </a>
+
+                <div class="toggler-mode">
+                    <input type="radio" id="existants" name="mode" checked>
+                    <input type="radio" id="vierges" name="mode">
+
+                    <label class="toggler-mode__point" for="existants" id="existants-l">Modèles existants</label>
+                    <label class="toggler-mode__point" for="vierges" id="vierges-l">Modèles vierges</label>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <aside class="main__aside aside">
+                <div class="aside__body">
+                    <div class="aside__container">
+                        <div class="aside__header hor-centered">
+                            <h2 class="title">Filtres de recherches</h2>
+                        </div>
+
+                        <div class="spoiler">
+                            <div class="spoiler__header">
+                                <span>Thèmes</span>
+                                <div class="spoiler__icon">
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="spoiler__body">
+                                <div class="radio-box">
+                                    <div class="radio-box__check">
+                                        <input type="radio" class="radio-box__input" id="anniversaire" name="radio-themes" checked>
+                                        <label for="anniversaire" class="radio-box__check-l" id="anniversaire-l"></label>
+                                    </div>
+                                    <label for="anniversaire">Anniversaire</label>
+                                </div>
+                                <div class="radio-box">
+                                    <div class="radio-box__check">
+                                        <input type="radio" class="radio-box__input" id="mariage" name="radio-themes">
+                                        <label for="mariage" class="radio-box__check-l" id="mariage-l"></label>
+                                    </div>
+                                    <label for="mariage">Mariage</label>
+                                </div>
+                                <div class="radio-box">
+                                    <div class="radio-box__check">
+                                        <input type="radio" class="radio-box__input" id="fête" name="radio-themes">
+                                        <label for="fête" class="radio-box__check-l" id="fête-l"></label>
+                                    </div>
+                                    <label for="fête">Fête</label>
+                                </div>
+                                <div class="radio-box">
+                                    <div class="radio-box__check">
+                                        <input type="radio" class="radio-box__input" id="bébé" name="radio-themes">
+                                        <label for="bébé" class="radio-box__check-l" id="bébé-l"></label>
+                                    </div>
+                                    <label for="bébé">Bébé</label>
+                                </div>
+                                <div class="radio-box">
+                                    <div class="radio-box__check">
+                                        <input type="radio" class="radio-box__input" id="autres" name="radio-themes">
+                                        <label for="autres" class="radio-box__check-l" id="autres-l"></label>
+                                    </div>
+                                    <label for="autres">Autres</label>
+                                </div>
+                                <div class="radio-box">
+                                    <div class="radio-box__check">
+                                        <input type="radio" class="radio-box__input" id="noël" name="radio-themes">
+                                        <label for="noël" class="radio-box__check-l" id="noël-l"></label>
+                                    </div>
+                                    <label for="noël">Noël</label>
+                                </div>
+                                <div class="radio-box">
+                                    <div class="radio-box__check">
+                                        <input type="radio" class="radio-box__input" id="sobre" name="radio-themes">
+                                        <label for="sobre" class="radio-box__check-l" id="sobre-l"></label>
+                                    </div>
+                                    <label for="sobre">Sobre</label>
+                                </div>
+                                <div class="radio-box">
+                                    <div class="radio-box__check">
+                                        <input type="radio" class="radio-box__input" id="chic" name="radio-themes">
+                                        <label for="chic" class="radio-box__check-l" id="chic-l"></label>
+                                    </div>
+                                    <label for="chic">Bohème/Chic</label>
+                                </div>
+                                <div class="radio-box">
+                                    <div class="radio-box__check">
+                                        <input type="radio" class="radio-box__input" id="floral" name="radio-themes">
+                                        <label for="floral" class="radio-box__check-l" id="floral-l"></label>
+                                    </div>
+                                    <label for="floral">Floral</label>
+                                </div>
+                                <div class="radio-box">
+                                    <div class="radio-box__check">
+                                        <input type="radio" class="radio-box__input" id="paillettes" name="radio-themes">
+                                        <label for="paillettes" class="radio-box__check-l" id="paillettes-l"></label>
+                                    </div>
+                                    <label for="paillettes">Or/Paillettes</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="spoiler">
+                            <div class="spoiler__header">
+                                <span>Formats</span>
+                                <div class="spoiler__icon">
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="spoiler__body">
+                                <div class="radio-box">
+                                    <div class="radio-box__check">
+                                        <input type="radio" class="radio-box__input" id="paysage" name="radio-formats" checked>
+                                        <label for="paysage" class="radio-box__check-l" id="paysage-l"></label>
+                                    </div>
+                                    <label for="paysage">Paysage</label>
+                                </div>
+                                <div class="radio-box">
+                                    <div class="radio-box__check">
+                                        <input type="radio" class="radio-box__input" id="portrait" name="radio-formats">
+                                        <label for="portrait" class="radio-box__check-l" id="portrait-l"></label>
+                                    </div>
+                                    <label for="portrait">Portrait</label>
+                                </div>
+                                <div class="radio-box">
+                                    <div class="radio-box__check">
+                                        <input type="radio" class="radio-box__input" id="strip" name="radio-formats">
+                                        <label for="strip" class="radio-box__check-l" id="strip-l"></label>
+                                    </div>
+                                    <label for="strip">Strip</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="spoiler">
+                            <div class="spoiler__header">
+                                <span>Prises de vue</span>
+                                <div class="spoiler__icon">
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="spoiler__body">
+                                <div class="radio-box">
+                                    <div class="radio-box__check">
+                                        <input type="radio" class="radio-box__input" id="one-vue" name="radio-vue" checked>
+                                        <label for="one-vue" class="radio-box__check-l" id="one-vue-l"></label>
+                                    </div>
+                                    <label for="one-vue">1 vue</label>
+                                </div>
+                                <div class="radio-box">
+                                    <div class="radio-box__check">
+                                        <input type="radio" class="radio-box__input" id="two-vue" name="radio-vue">
+                                        <label for="two-vue" class="radio-box__check-l" id="two-vue-l"></label>
+                                    </div>
+                                    <label for="two-vue">2 vues</label>
+                                </div>
+                                <div class="radio-box">
+                                    <div class="radio-box__check">
+                                        <input type="radio" class="radio-box__input" id="three-vue" name="radio-vue">
+                                        <label for="three-vue" class="radio-box__check-l" id="three-vue-l"></label>
+                                    </div>
+                                    <label for="three-vue">3 vues</label>
+                                </div>
+                                <div class="radio-box">
+                                    <div class="radio-box__check">
+                                        <input type="radio" class="radio-box__input" id="four-vue" name="radio-vue">
+                                        <label for="four-vue" class="radio-box__check-l" id="four-vue-l"></label>
+                                    </div>
+                                    <label for="four-vue">4 vues</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <div class="main__body body">
+                <div class="body__wrapper">
+                    <div class="content-body">
+                        <div class="content-body__container">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('click', e => {
+            if (e.target.closest('.spoiler__header')) {
+                e.target.closest('.spoiler').classList.toggle('active');
+            }
+        })
+    </script>
+</body>
+</html>
